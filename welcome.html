@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="stylesss.css">
+  <style>
+   /* .welcome-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 100px;
+      }*/
+      
+      .welcome-container:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url("https://www.theclimategroup.org/sites/default/files/styles/hero_header/public/2020-11/contact%20us.jpg?itok=pnuZW7ou") no-repeat center;
+        background-size: cover;
+        filter: blur(50px);
+        z-index: -1;
+      }
+  </style>
+</head>
+<body >
+  <div class="welcome-container">
+    <div class="welcome-content">
+      <h1>Welcome to Our Website</h1>
+      <p style="font-size: larger;">Find your own way....</p>
+      <a href="REGISTER.html" class="button">REGISTER</a>
+      <a href="dashboard.html" class="button" style="margin-left:3vh;">EXPLORE NOW</a>
+      <a href="CONTACT.html" class="button"  style="margin-left:3vh;">CONTACT US</a>
+      
+
+      <script src="script.js"></script>
+    </div>
+  </div>
+</body>
+</html>

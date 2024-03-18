@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Find Your Own Way - User Registration</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Font Awesome CDN link -->
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-image: url('background_image.jpg');
+			/* Replace 'background_image.jpg' with the path to your image */
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		/* Background Animation */
+		.background-animation {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			pointer-events: none;
+			overflow: hidden;
+		}
+		.background-animation:after{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: url("https://files.123freevectors.com/wp-content/original/202631-plain-light-color-background-graphic.jpg") no-repeat center;
+			background-size: cover;
+			filter: blur(50px);
+			z-index: -1;
+		  }
+		.background-animation div {
+			position: absolute;
+			background: linear-gradient(90deg, rgba(7, 107, 255, 0.8), rgba(255, 0, 0, 0.8));
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			animation: animate 25s linear infinite;
+			bottom: -150px;
+		}
+
+		.background-animation div:nth-child(1) {
+			left: 10%;
+			width: 80px;
+			height: 80px;
+			animation-delay: 0s;
+		}
+
+		.background-animation div:nth-child(2) {
+			left: 20%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 2s;
+			animation-duration: 20s;
+		}
+
+		.background-animation div:nth-child(3) {
+			left: 25%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 4s;
+		}
+
+		.background-animation div:nth-child(4) {
+			left: 40%;
+			width: 60px;
+			height: 60px;
+			animation-delay: 0s;
+			animation-duration: 18s;
+		}
+
+		.background-animation div:nth-child(5) {
+			left: 70%;
+			width: 20px;
+			height: 20px;
+			animation-delay: 0s;
+		}
+
+		@keyframes animate {
+			0% {
+				transform: translateY(0) rotate(0deg);
+				opacity: 1;
+				border-radius: 0;
+			}
+
+			100% {
+				transform: translateY(-1000px) rotate(720deg);
+				opacity: 0;
+				border-radius: 50%;
+			}
+		}
+
+		form {
+			width: 300px;
+			background-color: rgba(255, 255, 255, 0.8);
+			/* Background color for the form with some transparency */
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			/* Adding a shadow effect */
+			position: relative;
+			z-index: 2;
+			animation: fadeIn 1s ease forwards;
+			/* Apply fade-in animation */
+			opacity: 0;
+			/* Initially hidden */
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+				transform: translateY(-20px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		form h1 {
+			text-align: center;
+			color: #333;
+		}
+
+		.icon {
+			margin-right: 5px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="date"] {
+			width: 100%;
+			padding: 8px;
+			margin: 5px 0;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+		.thank-you-message {
+			display: none;
+			text-align: center;
+			color: #333;
+			font-size: 24px;
+			margin-top: 20px;
+		}
+
+		.next-button {
+			display: none;
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			margin-top: 20px;
+		}
+
+		.next-button:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="background-animation">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+<form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="093d42c7-1bdc-4630-aae0-bedff18a65ee">
+		<h1><i class="fas fa-map-signs icon"></i>Find Your Own Way</h1>
+		<label for="username"><i class="fas fa-user icon"></i>Name:</label>
+		<input type="text" id="username" name="username" placeholder="Enter Your Name" required>
+
+		<label for="useremail"><i class="fas fa-envelope icon"></i>Email:</label>
+		<input type="email" id="useremail" name="useremailid" placeholder="Enter Your Email" required>
+
+		<label for="usermobile"><i class="fas fa-phone icon"></i>Mobile Number:</label>
+		<input type="text" id="usermobile" name="usermobilenumber" placeholder="Enter Your Mobile Number" required>
+
+		<label for="useraddress"><i class="fas fa-map-marker-alt icon"></i>Address:</label>
+		<input type="text" id="useraddress" name="useraddress" placeholder="Enter Your Address" required>
+
+		<label for="gender"><i class="fas fa-venus-mars icon"></i>Gender:</label>
+		<input type="text" id="gender" name="gender" placeholder="Enter Your Gender" required>
+
+		<label for="birthdate"><i class="fas fa-birthday-cake icon"></i>Birthdate:</label>
+		<input type="date" id="birthdate" name="birthdate">
+
+		<input type="submit" value="Register">
+	</form>
+
+	<div id="thank-you" class="thank-you-message">
+		Thank you for registering!
+	</div>
+
+	<button id="next-button" class="next-button" onclick="showNextStep()">Next</button>
+
+	<script>
+		function submitForm(event) {
+			event.preventDefault(); // Prevent form submission
+			var form = document.getElementById("registration-form");
+			form.style.display = "none"; // Hide the registration form
+			var thankYouMessage = document.getElementById("thank-you");
+			thankYouMessage.style.display = "block"; // Show the thank you message
+			var nextButton = document.getElementById("next-button");
+			nextButton.style.display = "block"; // Show the next button
+		}
+
+		function showNextStep() {
+			// Redirect to the dashboard page
+			window.location.href = "dashboard.html";
+		}
+	</script>
+</body>
+
+</html>
