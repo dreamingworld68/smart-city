@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .container::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg") no-repeat center;
+            background-size: cover;
+            filter: blur(50px);
+            z-index: -1;
+          }
+        .job-listings {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .job-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .job-title {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        .job-company {
+            font-weight: bold;
+            color: #333;
+        }
+        .job-description {
+            color: #666;
+        }
+        .job-location {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Listings</h1>
+    </header>
+    <div class="container">
+        <ul class="job-listings">
+            <li class="job-item">
+                <h2 class="job-title">Software Engineer</h2>
+                <p class="job-company">Tech Solutions Inc.</p>
+                <p class="job-description">We are seeking a talented software engineer to join our dynamic team...</p>
+                <p class="job-location">Location: Bangalore, India</p>
+            </li>
+            <li class="job-item">
+                <h2 class="job-title">Marketing Specialist</h2>
+                <p class="job-company">Digital Marketing Agency</p>
+                <p class="job-description">We are looking for a creative marketing specialist to develop and implement...</p>
+                <p class="job-location">Location: Remote</p>
+            </li>
+            <!-- Add more job listings as needed -->
+        </ul>
+    </div>
+</body>
+</html>
